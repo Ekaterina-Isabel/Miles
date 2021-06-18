@@ -1,9 +1,16 @@
 public class Main {
     public static void main(String[] args) {
-        int ticketPriceInKopecks = 1_500_75;
+//        int ticketPriceInKopecks = -1_000_00;
+        int ticketPriceInKopecks = 2_000_00;
         int costOf_1_MileInKopecks = 20_00;
+        int numberOfMiles;
 
-        int numberOfMiles = ticketPriceInKopecks / costOf_1_MileInKopecks;
+        if (ticketPriceInKopecks >= 0) {
+            numberOfMiles = ticketPriceInKopecks / costOf_1_MileInKopecks;
+        } else {
+            numberOfMiles = 0;
+        }
+
         System.out.println("Количество начисленных миль за купленный билет: " + numberOfMiles);
     }
 }
